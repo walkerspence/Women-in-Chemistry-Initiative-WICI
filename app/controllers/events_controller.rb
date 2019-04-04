@@ -8,6 +8,7 @@ class EventsController < ApplicationController
   end
 
   def past_events
+    puts "hello"
     @events = Event.past_events
   end
 

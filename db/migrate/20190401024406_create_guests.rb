@@ -4,7 +4,7 @@ class CreateGuests < ActiveRecord::Migration[5.1]
       t.string :firstname
       t.string :lastname
       t.string :email
-      t.string :occupation
+      t.string :occupation => 'other'
       t.string :department
       t.string :gender
       t.references :event, index: true

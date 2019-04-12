@@ -8,8 +8,8 @@
   Last Name: <%= form.text_field :lastname, id: :lastname %><br>
   Email: <%= form.text_field :email, id: :email %><br>
   Optional <br>
-  Occupation: <%= form.select :occupation, [['Undergrad','undergrad'],['Graduate','graduate'], ['Other','other']] %>
-  Gender: <%= form.select :gender, [['Male','male'],['Female','female'],['Other','other'],['Prefer not to say','prefer not to say']] %>
-  Major: <%= form.select :department, [['Chemistry', 'chemistry'],['Stem non-chemistry', 'stem non-chemistry'], ['Other','other']] %><br>
+  Occupation: <%= form.select :occupation, [['Undergrad','undergrad'],['Graduate','graduate'], ['Other','other']], :selected => ['Other','other'] %>
+  Gender: <%= form.select :gender, [['Male','male'],['Female','female'],['Other','other'],['Prefer not to say','prefer not to say']], :selected => ['Other','other'] %>
+  Major: <%= form.select :department, [['Chemistry', 'chemistry'],['Stem non-chemistry', 'stem non-chemistry'], ['Other','other']], :selected => ['Other','other'] %><br>
   <%= form.submit "Submit", id: :submit  %>
 <% end %>

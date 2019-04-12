@@ -4,11 +4,14 @@ class CreateGuests < ActiveRecord::Migration[5.1]
       t.string :firstname
       t.string :lastname
       t.string :email
-      t.string :occupation, default: "other"
-      t.string :department, default: "other"
-      t.string :gender, default: "other"
+      t.string :occupation
+      t.string :department
+      t.string :gender
       t.references :event, index: true
       t.timestamps
     end
+    SystemSetting.create  occupation:  'other',
+                          department: 'other',
+                          gender: 'other'
   end
 end

@@ -39,6 +39,9 @@ ActiveRecord::Schema.define(version: 20190410230544) do
     t.string "firstname"
     t.string "lastname"
     t.string "email"
+    t.string "occupation"
+    t.string "gender"
+    t.string "department"
     t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

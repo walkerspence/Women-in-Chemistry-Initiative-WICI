@@ -27,6 +27,12 @@
   <strong>Capacity:</strong>
   <%= @event.capacity %>
 </p>
+<p>
+  <strong>Demographics:</strong>
+  <%= pie_chart @event.guests.group(:gender).count, colors: ["#00e5ff", "#c33c54", "#070268", "#ffd2a0"] %>
+  <%= pie_chart @event.guests.group(:occupation).count, colors: ["#00e5ff", "#c33c54", "#070268"] %>
+  <%= pie_chart @event.guests.group(:department).count, colors: ["#00e5ff", "#c33c54", "#070268"] %>
+</p>
 
 <p>
   <strong>Guests:</strong><br>

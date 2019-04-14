@@ -66,3 +66,25 @@ Feature: See if you are attending an event
       | lastname     | Guest          |
       | email        | test           |
     Then I should see "Your registration failed, please make sure your information is correct."
+
+
+
+
+
+
+  Scenario: Testing Pie charts
+  Given the following guests exist:
+      | firstname      | lastname         | email        | occupation           | gender             | department          | event_id|
+      | John           | Doe              | jd@gmail.com | Undergrad            | Male               | Chemistry           | 1       |
+      | Sara           | Sen              | ss@gmail.com | Graduate             | Female             | Chemical Engineering| 1       |
+      | Steph          | Curry            | sc@gmail.com | Postdoc              | Male               | Stem non-chemistry  | 1       |
+      | Tara           | Gon              | tg@gmail.com | Faculty Staff        | Prefer not to say  | Other               | 1       |
+      | Alex           | Morgan           | am@gmail.com | Other                | Female             | Other               | 1       |
+      | Sasha          | Downer           | sd@gmail.com | Postdoc              | Other              | Stem non-chemistry  | 1       |
+      
+      
+  When I follow "event_1"
+  Then I should see "Loading..."
+
+
+

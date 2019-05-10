@@ -1,18 +1,39 @@
-<div class="container-fluid" style="padding-top: 20px; padding-left: 30px">
-<h1> Confirm Donation </h1>
+<div class="container-fluid" style="padding-top: 20px; width: 30%; background: #FCFCFC; border: solid; border-color: #D3D3D3; border-width: 2px; border-radius: 6px; float: center">
+<h1 style="border-bottom-style: solid ; border-bottom-width: 1px; border-color: #D3D3D3; text-align: center;" > Confirm Donation </h1>
 <%= form_tag donations_path(amount_dollars: @donation.amount_dollars) do %>
-
-  <label class="amount">
-    <span>Amount: $<%= number_with_precision(@donation.amount_dollars, precision: 2) %></span>
-  </label>
-
+<div >
+  Please make sure the amount is correct. Click confirm to enter your payment information or click change to donate a different amount.
+  
+</div>
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Please enter your billing info."
           data-amount="<%= @donation.amount_cents %>"
           data-locale="auto"></script>
 
-  <br><%= submit_tag "Confirm", id: :confirm, class: "btn btn-primary text-white" %> <br><br>
-  <%= link_to 'Back', :back, class: "btn btn-secondary text-white" %>
+<div >
+  <%= submit_tag "Confirm", id: :confirm, class: "buttonsubmit", style: "font-size: 15px; align: left;" %>
+  <%= link_to 'Change', :back, style: "font-size: 14px; float: right; padding-top: 3%; padding-right: 10% ;color: blue;" %>
+</div>
+<div>
+  <label class="amount" style= " border-top-style : solid; border-color: #D3D3D3; text-align: center; width: 100%; border-width: .5px ; padding-right: 10%; margin-top: 5%;">
+    <div style= "color: #B80B0B; float: left; font-size: 25px; font-style: bold;">Donation Total: </div>
+    <div style= "color: #B80B0B; float: right; font-size: 25px; font-style: bold;"> $<%= number_with_precision(@donation.amount_dollars, precision: 2) %></div>
+  </label>
+</div> 
+
+
+   
+
+  <div style="margin-top: 18px">
+    <%= image_tag("/payment/stripe/powered_by_stripe.png", :alt => "rss feed", class: "cardstripe", style: "width: 20%; height: 20%") %>
+    <%= image_tag("/payment/paymethod/dark/1.png", :alt => "rss feed", class: "card", style: "width: 7%; height: 7%" ) %>
+    <%= image_tag("/payment/paymethod/dark/2.png", :alt => "rss feed", class: "card", style: "width: 7%; height: 7%") %>
+    <%= image_tag("/payment/paymethod/dark/22.png", :alt => "rss feed", class: "card", style: "width: 7%; height: 7%") %>
+    <%= image_tag("/payment/paymethod/dark/16.png", :alt => "rss feed", class: "card", style: "width: 7%; height: 7%") %>
+    <%= image_tag("/payment/paymethod/dark/14.png", :alt => "rss feed", class: "card", style: "width: 7%; height: 7%") %>
+    <%= image_tag("/payment/paymethod/dark/10.png", :alt => "rss feed", class: "card", style: "width: 7%; height: 7%") %>
+  </div>
+<br> 
 <% end %>
 </div>

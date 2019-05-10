@@ -3,3 +3,102 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .stripe-button-el { display: none !important }
+
+
+p.solid {
+	border-style: solid;
+	border-radius: 5px;
+
+}
+
+img.card {
+	margin-top: 10px; 
+	height: 11%; 
+	width: 11%;
+	display: inline-block;
+}
+
+img.cardstripe {
+	float: left ;
+	margin-top: 10px; 
+	height: 27%; 
+	width: 27%;
+	display: inline-block;
+}
+
+img.lock{
+	height: 5%; 
+	width: 5%;
+	display: inline-block;
+}
+
+.button {
+margin-top: 10px; 
+background: #F9F9F9 !important;
+border: 2px solid #D3D3D3 !important;
+border-radius: 6px;
+display: inline-block;
+width: 32.7%;
+height: 20%;
+}
+
+.buttonsubmit {
+margin-top: 10px; 
+background: #FFD259 !important;
+border: 2px solid #D3D3D3 !important;
+border-radius: 6px;
+display: inline-block;
+width: 32.7%;
+height: 20%;
+}
+
+
+
+.buttoncustom {
+margin-top: 10px; 
+background: #F9F9F9 !important;
+border: 2px solid #D3D3D3 !important;
+border-radius: 6px;
+display: inline-block;
+width: 25%;
+}
+
+.buttoncustom:hover {
+color: #494949 !important;
+border-color: #494949 !important;
+transition: all 0.3s ease 0s;
+}
+
+.donatetext {
+margin-top: 10px; 
+background: #FFFFFF !important;
+border: 2px solid #D3D3D3 !important;
+border-radius: 6px;
+display: inline-block;
+width: 75%;
+height: 42px;
+}
+
+
+.button:hover {
+color: #494949 !important;
+border-radius: 10px;
+border-color: #494949 !important;
+transition: all 0.3s ease 0s;
+}
+
+.buttonsubmit:hover {
+color: #494949 !important;
+border-radius: 10px;
+border-color: #494949 !important;
+transition: all 0.3s ease 0s;
+}
+
+.buttoncancel:hover {
+background: #FFA795 !important;
+color: #494949 !important;
+border-radius: 10px;
+border-color: #494949 !important;
+transition: all 0.3s ease 0s;
+}
+

@@ -3,7 +3,7 @@
 <div align="center" style= "padding-top: 20px; border: solid; background: #129EA2; color: #129EA2; border-width: .5px;" >
 	<div class="top-right"  >
 		<div class="container-fluid" style="margin-top: 3%; padding-bottom: 45px; width: 30%; float: right; margin-right: 20%">
-			<%= image_tag("https://scontent-sjc3-1.xx.fbcdn.net/v/t31.0-8/10355612_1466423220317340_2509667441501223212_o.png?_nc_cat=109&_nc_ht=scontent-sjc3-1.xx&oh=a0a3aa854e49d3c92d30d3063a42bc74&oe=5D6057B5", :alt => "rss feed", align: "center", style: "float: centered; margin-bottom: 10px; width: 70%; height 70%;") %>
+			<%= image_tag("/wicilogo.png", :alt => "rss feed", align: "center", style: "float: centered; margin-bottom: 10px; width: 70%; height 70%;") %>
 			<div style= "float:left; font-size: 12px; ">
 				The Women in Chemistry Initiative is a non-profit 501c3 organization.  All donations are tax deductible.  For more information on tax deductions for 501c3 non-profits, please visit the following website.
 			</div>
@@ -20,8 +20,9 @@
 	<%= form_tag(new_donation_path, method: :get, class: "form-group") do %>
 	<div class="input-group mb-3" style= "display: inline-block;">
   		<div class="input-group-prepend">
-    		<%= submit_tag "Donate $", id: :donate, class: "buttoncustom", style: "font-size: 12px;"%>
-  			<%= text_field_tag :amount_dollars, 0, class: "donatetext", style: "border-radius: 5px; padding-left: 5px"%>
+  			<span style= "margin-right: -10px; position: absolute; padding-left: 1%; padding-top: 4.7%;">$</span>
+  			<%= text_field_tag :amount_dollars, 0, class: "donatetext", style: "border-radius: 5px; padding-left: 20px;"%>
+  			<%= submit_tag "Donate", id: :donate, class: "buttoncustom", style: "font-size: 12px;"%>
   		</div>
 
 	<% end %>
@@ -46,3 +47,6 @@
 
 </div>
 </div>
+
+<div style= "padding-bottom: 50%;" >
+	</div>

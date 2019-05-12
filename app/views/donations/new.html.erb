@@ -1,10 +1,10 @@
-<div style= "padding-top: 20px; border: solid; background: #129EA2; color: #129EA2; border-width: .5px;">
+<div style= "padding-top: 20px; border: solid; background: #0F4040; color: #0F4040; border-width: .5px;">
 </div>
 
-<div class="container-fluid" style="margin-top: 5%; padding-top: 20px; width: 30%; background: #FCFCFC; border: solid; border-color: #D3D3D3; border-width: 2px; border-radius: 6px; float: center">
-<h1 style="border-bottom-style: solid ; border-bottom-width: 1px; border-color: #D3D3D3; text-align: center;" > Confirm Donation </h1>
+<div class="container-fluid" style="margin-top: 5%; padding-top: 20px; width: 30%; background: #2E8C8C; border: solid; border-color: #0F4040; border-width: 2px; border-radius: 6px; float: center">
+<h1 style="border-bottom-style: solid ; border-bottom-width: 1px; border-color: #0F4040; text-align: center;" > Confirm Donation </h1>
 <%= form_tag donations_path(amount_dollars: @donation.amount_dollars) do %>
-<div >
+<div style="color: #ffffff">
   Please make sure the amount is correct. Click confirm to enter your payment information or click change to donate a different amount.
   
 </div>
@@ -16,11 +16,11 @@
 
 <div >
   <%= submit_tag "Confirm", id: :confirm, class: "buttonsubmit", style: "font-size: 15px; align: left;" %>
-  <%= link_to 'Change', :back, style: "font-size: 14px; float: right; padding-top: 3%; padding-right: 10.8% ;color: blue;" %>
+  <%= link_to 'Change', :back, style: "font-size: 14px; float: right; padding-top: 3%; padding-right: 10.8% ; color: blue" %>
 </div>
 <div>
-  <label class="amount" style= " border-top-style : solid; border-color: #D3D3D3; text-align: center; width: 100%; border-width: .5px ; padding-right: 10%; margin-top: 5%;">
-    <div style= " float: left; font-size: 25px; font-style: bold;">Donation Total: </div>
+  <label class="amount" style= " border-top-style : solid; border-color: #0F4040; text-align: center; width: 100%; border-width: .5px ; padding-right: 10%; margin-top: 5%;">
+    <div style= " float: left; font-size: 25px; font-style: bold; color: #ffffff">Donation Total: </div>
     <div style= "color: #38C44F; float: right; font-size: 25px; font-style: bold;"> $<%= number_with_precision(@donation.amount_dollars, precision: 2) %></div>
   </label>
 </div> 

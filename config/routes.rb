@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :photos, except: [:show]
   resources :leaders, except: [:show, :index]
 
   devise_for :volunteers, controllers: {
@@ -34,12 +35,14 @@ Rails.application.routes.draw do
     delete 'volunteer/:id', to: 'volunteers/registrations#destroy', as: 'destroy_volunteer'
     post 'admin/:id/approve', to: 'admins/registrations#approve', as: 'approve_admin'
     delete 'admin/:id', to: 'admins/registrations#destroy', as: 'destroy_admin'
+    post 'toggle', to: 'admins/registrations#toggle_donation_show'
   end
 
   resources :about, only: [:index]
   resources :donations, only: [:index, :new, :create]
 
   get 'past-events', to: 'events#past_events', as: 'past_events'
+  get 'home', to: 'photos#home', as: 'home_path'
   root 'home#home'
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)

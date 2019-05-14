@@ -22,6 +22,7 @@ class GuestsController < ApplicationController
       flash[:alert] = 'Your registration failed, please make sure your information is correct.'
       render "new"
     end
+
   rescue Stripe::CardError, Stripe::InvalidRequestError => e
     @guest.destroy
     flash[:alert] = e.message

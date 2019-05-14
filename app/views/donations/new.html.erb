@@ -6,7 +6,7 @@
 <%= form_tag donations_path(amount_dollars: @donation.amount_dollars) do %>
 <div style="color: #ffffff">
   Please make sure the amount is correct. Click confirm to enter your payment information or click change to donate a different amount.
-  
+
 </div>
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -23,10 +23,10 @@
     <div style= " float: left; font-size: 25px; font-style: bold; color: #ffffff">Donation Total: </div>
     <div style= "color: #ffffff; float: right; font-size: 25px; font-style: bold;"> $<%= number_with_precision(@donation.amount_dollars, precision: 2) %></div>
   </label>
-</div> 
+</div>
 
 
-   
+
 
   <div style="margin-top: 18px">
     <%= image_tag("/payment/stripe/powered_by_stripe.png", :alt => "rss feed", class: "cardstripe", style: "width: 20%; height: 20%") %>
@@ -37,7 +37,7 @@
     <%= image_tag("/payment/paymethod/dark/14.png", :alt => "rss feed", class: "card", style: "width: 7%; height: 7%") %>
     <%= image_tag("/payment/paymethod/dark/10.png", :alt => "rss feed", class: "card", style: "width: 7%; height: 7%") %>
   </div>
-<br> 
+<br>
 <% end %>
 </div>
 

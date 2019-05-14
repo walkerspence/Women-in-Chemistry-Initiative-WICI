@@ -3,8 +3,8 @@
 <div align="center" style= "padding-top: 20px; border: solid; background: #0F4040; color: #0F4040; border-width: .5px;" >
 	<div class="top-right"  >
 		<div class="container-fluid" style="margin-top: 5%; padding-bottom: 10%; width: 30%; float: right; margin-right: 20%">
-			<div class="container-fluid" style= "background: #ffffff; border-radius: 50%; padding: 10%; margin-bottom: 3%">
-				<%= image_tag("/wicilogo.png", :alt => "rss feed", align: "center", style: "float: centered; margin-bottom: 10px; width: 80%; height 80%;") %>
+			<div class="container-fluid" style= "background: #ffffff; border-radius: 50%; padding-top: 15%; width: 420px; height: 420px; margin-bottom: 3%;">
+				<%= image_tag("/wicilogo.png", :alt => "rss feed", align: "center", style: "float: centered; margin-bottom: 10px; width: 70%; height 70%;") %>
 			</div>
 			<div style= "float:left; font-size: 12px; color: #ffffff">
 				The Women in Chemistry Initiative is a non-profit 501c3 organization.  All donations are tax deductible.  For more information on tax deductions for 501c3 non-profits, please visit the following website.
@@ -15,15 +15,15 @@
 </div>
 
 
-<div class="container-fluid" style="padding-top: 2%; margin-top: 5%; background: #2E8C8C; width: 30%; float: left; border: solid; border-width: 1px; border-color: #0F4040; border-radius: 5px; margin-left: 20%; text-align: center;">
-	<h1 class="container-fluid" style="padding-bottom: 1%; border-bottom: solid; border-bottom-width: 1px; border-bottom-color: #0F4040"> 
+<div class="container-fluid" style="padding-top: 2%; margin-top: 7%; background: #2E8C8C; width: 30%; float: left; border: solid; border-width: 1px; border-color: #0F4040; border-radius: 5px; margin-left: 20%; text-align: center;">
+	<h1 class="container-fluid" style="padding-bottom: 1%; border-bottom: solid; border-bottom-width: 1px; border-bottom-color: #ffffff"> 
 	Support Our Cause </h1>
 	<div class="container-fluid" style= "color: #ffffff;"> Proceeds go towards the Women in Chemistry Initiative </div>
 
 	<%= form_tag(new_donation_path, method: :get, class: "form-group") do %>
 	<div class="input-group mb-3">
  
-  			<span style= "margin-right: -10px; position: absolute; padding-left: 1%; padding-top: 1.69%; z-index: 1; ">$</span>
+  		
   			<%= text_field_tag :amount_dollars, 0, class: "form-control", style: "padding-left: 20px; border-radius: 5px;"%>
   			<%= submit_tag "Donate", id: :donate, class: "btn btn-primary text-center"%>
 
